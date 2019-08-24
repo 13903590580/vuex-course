@@ -14,7 +14,7 @@ export default new Vuex.Store({
     ]
   },
   getters: {
-    count: state => ++state.count,
+    count: state => state.count,
     // count(state) {
     //   return ++state.count
     // },
@@ -36,10 +36,10 @@ export default new Vuex.Store({
     //     })
     //   })(id)
     // }
-
   },
   mutations: {
-
+    incrementCount: state => state.count++,
+    decrementCount: (state, payload) => state.count -= payload.amount
   },
   actions: {
 
