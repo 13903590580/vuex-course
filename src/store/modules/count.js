@@ -20,8 +20,8 @@ const actions = {
     },
     decrementCountAsync: (context, payload) => {
         setTimeout(() => {
-            // context./** = this.$store */
-            commit("decrementCount", payload)
+            context./** = this.$store */
+                commit("decrementCount", payload)
         }, 2000);
     }
 };
